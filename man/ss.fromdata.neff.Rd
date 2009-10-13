@@ -40,15 +40,15 @@ The one-sided tests are designed to test either
 The choice of hypotheses is determined by the value of \code{thetahat}; 
 if \code{thetahat} \eqn{>}{>} \code{thetaB} 
 then the former hypotheses are tested, otherwise the latter are.
- See Fay, Halloran and Follmann (2006) for details. 
+ See Fay, Halloran and Follmann (2007) for details. 
 }
 \value{
 Object of class "power.htest", a list of the arguments
      (including the computed sample sizes) augmented with 'METHOD' and 'NOTE'
      elements. The values 'n0' and 'n1' are the samples sizes for the two groups, rounded up to the nearest integer.
 }
-\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2006). `Accounting for Variability in Sample Size Estimation with Applications to 
-Nonadherence and Estimation of  Variance and Effect Size' (submitted to Biometrics). }
+\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2007). `Accounting for Variability in Sample Size Estimation with Applications to 
+Nonadherence and Estimation of  Variance and Effect Size' Biometrics 63: 465-474. }
 \author{Michael P. Fay}
 \note{ 
 The function \code{ss.fromdata.neff} calls \code{\link{uniroot.integer}}, a function written for this package that 

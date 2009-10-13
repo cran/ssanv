@@ -57,14 +57,14 @@ For refinement='Bernoulli' the \code{sigma0.sq} and \code{var.ratio} values are 
 For refinement='Fisher.exact' only the two-sided alternative is allowed and the sample size related to 
 exact powers for the 2X2 Fisher exact test are calculated.  
 
-See Fay, Halloran and Follmann (2006) for details. 
+See Fay, Halloran and Follmann (2007) for details. 
 }
 \value{Object of class "power.htest", a list of the arguments
      (including the computed sample sizes) augmented with 'METHOD' and 'NOTE'
      elements. The values 'n0' and 'n1' are the samples sizes for the two groups, rounded up to the nearest integer.
 }
-\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2006). `Accounting for Variability in Sample Size Estimation with Applications to 
-Nonadherence and Estimation of  Variance and Effect Size' (submitted to Biometrics). }
+\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2007). `Accounting for Variability in Sample Size Estimation with Applications to 
+Nonadherence and Estimation of  Variance and Effect Size' Biometrics 63: 465-474. }
 \author{Michael P. Fay}
 \note{ 
 If you have a two-sided hypotheses with binary data, then refinement='Fisher.exact' is 

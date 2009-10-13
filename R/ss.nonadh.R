@@ -44,7 +44,7 @@ function(mu0 = NULL, mu1 = NULL, delta=NULL, sigma0.sq=1, rho0=0, rho1=0, ss.rat
        }
     else if (refinement=="Normal" ){
         N0.start<- floor( ((V0 + V1/ss.ratio)*(Za+Zb)^2) / ((1-rho0-rho1)*delta-deltaB )^2)
-        rootfunc<-function(n0,alpha=sig.level/tside,v0=V0,v1=V1,r=ss.ratio,nominal.power=power,Delta.star.minus.deltaB=delta.star.minus.deltaB){
+        rootfunc1<-function(n0,alpha=sig.level/tside,v0=V0,v1=V1,r=ss.ratio,nominal.power=power,Delta.star.minus.deltaB=delta.star.minus.deltaB){
             ### calculate the power by t distribution minus nominal power
             n0<-ceiling(n0)
             n1<-ceiling(n0*r)
@@ -58,8 +58,8 @@ function(mu0 = NULL, mu1 = NULL, delta=NULL, sigma0.sq=1, rho0=0, rho1=0, ss.rat
             #print(temp)
             nominal.power-POWER
           } 
-        if (rootfunc(N0.start)<0) N0.start<-1
-        N0<-uniroot.integer(rootfunc, lower =N0.start, upper =Inf,step.power=1)$root
+        if (rootfunc1(N0.start)<0) N0.start<-1
+        N0<-uniroot.integer(rootfunc1, lower =N0.start, upper =Inf,step.power=1)$root
        }
     else if (refinement=="Bernoulli"  || refinement=="Fisher.exact" ){
        if (is.null(mu0)) stop("For binary data, need a value for mu0")
@@ -81,7 +81,7 @@ function(mu0 = NULL, mu1 = NULL, delta=NULL, sigma0.sq=1, rho0=0, rho1=0, ss.rat
            METHOD<-"Sample Size with Fisher's Exact and Nonadherence"
            N0.start<- max(1,ceiling(N0)-1)
            print("Intermediate Calculations:POWER is exact power of Fisher's exact test")
-           rootfunc<-function(n0,p0=mu0.star,p1=mu1.star,alpha=sig.level,nominal.power=power,r=ss.ratio,eps=error.fisher){
+           rootfunc2<-function(n0,p0=mu0.star,p1=mu1.star,alpha=sig.level,nominal.power=power,r=ss.ratio,eps=error.fisher){
 		    prob.reject<-0
                 n0<-ceiling(n0)
                 n1<-ceiling(n0*r)
@@ -100,8 +100,8 @@ function(mu0 = NULL, mu1 = NULL, delta=NULL, sigma0.sq=1, rho0=0, rho1=0, ss.rat
                 print(temp)
                 nominal.power - prob.reject
             }
-           if (rootfunc(N0.start)<0) N0.start<-1
-          N0<-uniroot.integer(rootfunc, lower =N0.start, upper =Inf,step.power=3)$root
+           if (rootfunc2(N0.start)<0) N0.start<-1
+          N0<-uniroot.integer(rootfunc2, lower =N0.start, upper =Inf,step.power=3)$root
         } ### end of Fisher.exact if statement
        } ### end of Bernoulli or Fisher.exact if statement
     else { stop("refinement should equal either NULL, 'normal', 'Bernoulli' or 'Fisher.exact'") }

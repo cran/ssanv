@@ -1,0 +1,19 @@
+citHeader("To cite ssanv in publications use:")
+
+citEntry(entry="Article",
+  title        = "Accounting for variability in sample size estimation with applications to nonadherence and estimation of variance and effect size",
+  author       = personList(as.person("Michael P. Fay"),
+		   as.person("M. Elizabeth Halloran"),
+		   as.person("Dean A. Follmann")),
+  journal      = "Biometrics",
+  year         = "2007",
+  volume       = "63",  
+  pages        = "465--474",
+  
+  textVersion  =
+  paste("Fay, M.P.,Follmann, D.A., Halloran, M.E. (2007).",
+"Accounting for variability in sample size estimation with applications to nonadherence and estimation of variance and effect size",
+ "Biometrics 63: 465--474."),
+  header = ""
+)
+

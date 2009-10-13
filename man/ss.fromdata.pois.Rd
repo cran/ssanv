@@ -4,7 +4,6 @@
 \title{Find sample sizes when 2 Poisson means are estimated from data }
 \description{
 Calculate sample sizes for two-sample differences in Poisson means when means are estimated from existing data}
-}
 \usage{
 ss.fromdata.pois(xbar0, xbar1, m0, m1, ss.ratio = 1, sig.level = 0.05, 
     real.power = 0.8, nominal.power = NULL, 
@@ -44,14 +43,14 @@ and
 The choice of hypotheses is determined by the value of \eqn{\hat{\mu}_0}{mu0hat} 
 and \eqn{\hat{\mu}_1}{mu1hat}; 
 if \eqn{\hat{\mu}_0 > \hat{\mu}_1}{mu0hat > mu1hat} then the former hypotheses are tested, otherwise the latter are.
- See Fay, Halloran and Follmann (2006) for details. 
+ See Fay, Halloran and Follmann (2007) for details. 
 }
 \value{Object of class "power.htest", a list of the arguments
      (including the computed sample sizes) augmented with 'METHOD' and 'NOTE'
      elements. The values 'n0' and 'n1' are the samples sizes for the two groups, rounded up to the nearest integer.
 }
-\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2006). `Accounting for Variability in Sample Size Estimation with Applications to 
-Nonadherence and Estimation of  Variance and Effect Size' (submitted to Biometrics). }
+\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2007). `Accounting for Variability in Sample Size Estimation with Applications to 
+Nonadherence and Estimation of  Variance and Effect Size' Biometrics 63: 465-474. }
 \author{Michael P. Fay}
 \note{ 
 The function \code{ss.fromdata.pois} calls \code{\link{uniroot.integer}}, a function written for this package that 

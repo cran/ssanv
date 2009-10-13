@@ -21,8 +21,8 @@ See \code{\link{ss.fromdata.nvar}}.
 \value{
 Calibrated beta value = 1 - calibrated power.
 }
-\references{  Fay, M.P., Halloran, M.E., and Follmann, D.A. (2006). `Accounting for Variability in Sample Size Estimation with Applications to 
-Nonadherence and Estimation of  Variance and Effect Size' (submitted to Biometrics). }
+\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2007). `Accounting for Variability in Sample Size Estimation with Applications to 
+Nonadherence and Estimation of  Variance and Effect Size' Biometrics 63: 465-474. }
 \author{Michael P. Fay}
 %-\note{ }
 \seealso{ \code{\link{ss.fromdata.nvar}} }

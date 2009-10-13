@@ -5,7 +5,6 @@
 \description{
 Calculate sample sizes for two-sample differences in normal means when the standard deviation (or variance) 
 is estimated from existing data.}
-}
 \usage{
 ss.fromdata.nvar(delta, sdhat = NULL, vhat = NULL, 
     df = Inf, ss.ratio = 1, var.ratio = 1, deltaB = 0, 
@@ -44,19 +43,19 @@ The choice of hypotheses is determined by the value of \code{delta};
 if \code{delta} \eqn{>}{>} \code{deltaB}  
 then the former hypotheses are tested, otherwise the latter are.
 
-See Fay, Halloran and Follmann (2006) for details. 
+See Fay, Halloran and Follmann (2007) for details. 
 }
 \value{
 Object of class "power.htest", a list of the arguments
      (including the computed sample sizes) augmented with 'METHOD' and 'NOTE'
      elements. The values 'n0' and 'n1' are the samples sizes for the two groups, rounded up to the nearest integer.
 }
-\references{  Fay, M.P., Halloran, M.E., and Follmann, D.A. (2006). `Accounting for Variability in Sample Size Estimation with Applications to 
-Nonadherence and Estimation of  Variance and Effect Size' (submitted to Biometrics). }
+\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2007). `Accounting for Variability in Sample Size Estimation with Applications to 
+Nonadherence and Estimation of  Variance and Effect Size' Biometrics 63: 465-474. }
 \author{Michael P. Fay}
 \note{
 The function \code{ss.fromdata.nvar} calls \code{\link{find.calibrated.beta}}, a function written for this package 
-that finds the calibrated beta value (see Fay, Halloran and Follmann, 2006). 
+that finds the calibrated beta value (see Fay, Halloran and Follmann, 2007). 
 }
 \seealso{  \code{\link{ss.fromdata.neff}}, 
 \code{\link{ss.fromdata.pois}},  

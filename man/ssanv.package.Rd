@@ -14,8 +14,8 @@ estimating parameters from data.
 \tabular{ll}{
 Package: \tab ssanv\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2006-02-08\cr
+Version: \tab 1.0-1\cr
+Date: \tab 2009-10-13\cr
 License: \tab GPL2 \cr
 }
 This package does adjustments for sample size calculations for two-sample difference in means tests. 
@@ -31,10 +31,8 @@ come from normal distributions with the same variance,
 
 Maintainer: Michael Fay <mfay@niaid.nih.gov>
 }
-\references{
-Fay, M.P., Halloran, M.E., and Follmann, D.A. (2006). `Accounting for Variability in Sample Size Estimation with Applications to 
-Nonadherence and Estimation of  Variance and Effect Size' (submitted to Biometrics). 
-}
+\references{ Fay, M.P., Halloran, M.E., and Follmann, D.A. (2007). `Accounting for Variability in Sample Size Estimation with Applications to 
+Nonadherence and Estimation of  Variance and Effect Size' Biometrics 63: 465-474. }
 \keyword{htest}
 %\seealso{
 %~~ Optional links to other man pages, e.g. ~~
@@ -46,7 +44,7 @@ Nonadherence and Estimation of  Variance and Effect Size' (submitted to Biometri
 ss.nonadh(delta=.5,rho0=.3)
 
 ### Suppose you estimate standard deviation of .32 from a sample of size 12
-### and the clinically significant difference is .8
+### and the clinically significant difference is .2
 ss.fromdata.nvar(delta=.2,sdhat=.32,df=11)
 ### The usual method is to assume that the standard deviation is known 
 ### this result is the same as df=Inf
