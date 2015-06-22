@@ -3,9 +3,8 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Find the root of a function to the nearest integer}
 \description{
-Let f be a monotonic function that changes sign within the interval specified. 
-If \code{pos.side}=TRUE (or FALSE) then \code{uniroot.integer} finds the integer i such that 
-f(i) is closest to the sign change and is positive (or negative).  
+Let f be a monotonic function that changes sign within the interval specified. If f(i)=0 for some i within the interval specified (including the ends of the interval), then the root is i. Otherwise  if \code{pos.side}=TRUE (or FALSE) then \code{uniroot.integer} finds the integer i such that 
+f(i) is closest to the sign change and is positive (or negative). 
 }
 \usage{
 uniroot.integer(f, interval, lower = min(interval), upper = max(interval), 
@@ -27,8 +26,8 @@ uniroot.integer(f, interval, lower = min(interval), upper = max(interval),
 }
 \details{
 The algorithm evaluates f(i) iteratively, increasing (or decreasing if step.up=FALSE) 
-i by \eqn{2^{step.power}}{2^step.power} until the value of f(i) switches sign.
-Then the change in  'i' is halved each iteration until convergence. 
+i by \eqn{2^{step.power}}{2^step.power} until either f(i)=0 or f(i) switches sign.
+If f(i)=0, then stop. If f(i) switches sign, then the change in  'i' is halved each iteration until convergence. 
 }
 \value{
 A list with the following elements:
@@ -36,9 +35,9 @@ A list with the following elements:
   \item{f.root}{value of f at root}
   \item{iter}{number of times f was evaluated}
 }
-%-\references{ ~put references to the literature/web site here ~ }
+%-\references{  ~ }
 \author{Michael P. Fay}
-\note{Unlike \code{\link{uniroot}}, the function is not evaluated at both extremes. This makes 
+\note{Unlike \code{\link{uniroot}}, the function is not automatically evaluated at both extremes. This makes 
 \code{uniroot.integer} an efficient method to use when the calculation time of f(i) 
 increases with the value of 'i'. For an example of the importance of this see 
 \code{\link{ss.fromdata.pois}}. }

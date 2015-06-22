@@ -1,13 +1,13 @@
-b9806d63d3d6c315fb29be3e3e6219ed *ChangeLog
-fac08c44f9282aa583974d004111e86b *DESCRIPTION
+144712e7dbb722d2164aa169cea7072d *ChangeLog
+6c0436a0d9891908ba0de014c928f870 *DESCRIPTION
 eb80d4f36595e8c461d8f8685c030140 *NAMESPACE
 32f0561bb884d723c1b5b6138475570f *R/find.calibrated.beta.R
 34114d00e51d043e23b2ff0f54f71022 *R/ss.fromdata.neff.R
 7bf774ec070f78261904e46b5d3e4250 *R/ss.fromdata.nvar.R
 62ffdde4338f58ee34a49f70deba8bbe *R/ss.fromdata.pois.R
 cd16359bc4a81f178c1ba0f602fe3f16 *R/ss.nonadh.R
-f785bb7e7d6b6d435a0076806eb648ec *R/uniroot.integer.R
-1a9d401b9ea0023fced5fa6e03fd92a1 *data/example.of.Fisher.exact.rda
+2061a57355d4543a103af2d0844ca602 *R/uniroot.integer.R
+f8f811b30417ed7f797aa128b4215e9a *data/example.of.Fisher.exact.rda
 0f231e4d46b473ef0d0a1309342ae2e5 *inst/CITATION
 11b0e8c02ad7ed681b2c0050558a5915 *man/example.of.Fisher.exact.Rd
 5309f6c2639ab844559217ce048993d5 *man/find.calibrated.beta.Rd
@@ -15,5 +15,6 @@ f785bb7e7d6b6d435a0076806eb648ec *R/uniroot.integer.R
 7ef045a683df4587cd29b520ce0b363b *man/ss.fromdata.nvar.Rd
 0d96f0c3da859d1f01aeead646f2b8a1 *man/ss.fromdata.pois.Rd
 14c4ecdc40851099ac5e816f9d95f571 *man/ss.nonadh.Rd
-f9d0adef54b41f2515c3f8e683f9b7e2 *man/ssanv.package.Rd
-a7dbc8c87d87607198feeb98d0827801 *man/uniroot.integer.Rd
+d55ef8a651a48f98a3fa4359e727c577 *man/ssanv.package.Rd
+87a843057d90027c6d751e3e2f82d877 *man/uniroot.integer.Rd
+54d36b681f935f69c6d1a181a0d07253 *tests/check.uniroot.R

@@ -3,7 +3,7 @@
 \alias{ssanv}
 \docType{package}
 \title{
-Sample Size Adjusted for Nonadherence or Variability of input parameters}
+Sample Size Adjusted for Nonadherence or Variability of Input Parameters}
 \description{
 Calculate sample size for two sample difference in means tests. The function, 
 \code{ss.nonadh} accounts for known proportions of nonadherence. There are three 
@@ -14,9 +14,9 @@ estimating parameters from data.
 \tabular{ll}{
 Package: \tab ssanv\cr
 Type: \tab Package\cr
-Version: \tab 1.0-1\cr
-Date: \tab 2009-10-13\cr
-License: \tab GPL2 \cr
+Version: \tab 1.1\cr
+Date: \tab 2015-06-22\cr
+License: \tab GPL3 \cr
 }
 This package does adjustments for sample size calculations for two-sample difference in means tests. 
 The function \code{ss.nonadh} adjusts for nonadherence, where the responses may be continuous, discrete, or binary.
